@@ -1,14 +1,14 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
-const Book = new Schema({
+const Fiction = new Schema({
   title: String,
   author: String,
   description: String,
   isbn: String,
   rank: Number,
   bookImage: String,
-  review: {}
+  reviews: {}
 });
 
-module.exports = mongoose.model("Book", Book);
+module.exports = mongoose.model("Fiction", Fiction);

@@ -8,7 +8,7 @@ const Nonfiction = new Schema({
   isbn: String,
   rank: Number,
   bookImage: String,
-  review: {}
+  reviews: {}
 });
 
 module.exports = mongoose.model("Nonfiction", Nonfiction);
