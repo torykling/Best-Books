@@ -114,5 +114,10 @@ app.delete("/ourbooks/:title", function(req, res) {
     res.json(book);
   });
 });
+app.delete("/ourbooks", function(req, res) {
+  OurBook.deleteMany({}).then(books => {
+    res.json(books);
+  });
+});
 
 app.listen(4000, () => console.log("listening on port 4000"));
