@@ -56,5 +56,5 @@ Sample result from this endpoint: http://localhost:4000/nonfiction/title/EDUCATE
 
 ## Contribute
 
-source code: https://github.com/torykling/Best-Books
-issues: https://github.com/torykling/Best-Books/issues
+- source code: https://github.com/torykling/Best-Books
+- issues: https://github.com/torykling/Best-Books/issues

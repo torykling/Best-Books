@@ -1,5 +1,5 @@
 const express = require("express");
-const Book = require("./models/Fiction");
+const Fiction = require("./models/Fiction");
 const Nonfiction = require("./models/Nonfiction");
 const OurBook = require("./models/OurBook");
 const app = express();
@@ -15,22 +15,22 @@ app.get("/", function(req, res) {
 });
 // fiction routes
 app.get("/fiction", function(req, res) {
-  Book.find({}).then(books => {
+  Fiction.find({}).then(books => {
     res.json(books);
   });
 });
 app.get("/fiction/author/:author", function(req, res) {
-  Book.find({ author: req.params.author }).then(book => {
+  Fiction.find({ author: req.params.author }).then(book => {
     res.json(book);
   });
 });
 app.get("/fiction/title/:title", function(req, res) {
-  Book.find({ title: req.params.title }).then(book => {
+  Fiction.find({ title: req.params.title }).then(book => {
     res.json(book);
   });
 });
 app.get("/fiction/rank/:rank", function(req, res) {
-  Book.find({ rank: req.params.rank }).then(book => {
+  Fiction.find({ rank: req.params.rank }).then(book => {
     res.json(book);
   });
 });
