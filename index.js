@@ -19,13 +19,18 @@ app.get("/fiction", function(req, res) {
     res.json(books);
   });
 });
-app.get("/fiction/:author", function(req, res) {
+app.get("/fiction/author/:author", function(req, res) {
   Book.find({ author: req.params.author }).then(book => {
     res.json(book);
   });
 });
 app.get("/fiction/title/:title", function(req, res) {
   Book.find({ title: req.params.title }).then(book => {
+    res.json(book);
+  });
+});
+app.get("/fiction/rank/:rank", function(req, res) {
+  Book.find({ rank: req.params.rank }).then(book => {
     res.json(book);
   });
 });
@@ -53,13 +58,18 @@ app.get("/nonfiction", function(req, res) {
     res.json(books);
   });
 });
-app.get("/nonfiction/:author", function(req, res) {
+app.get("/nonfiction/author/:author", function(req, res) {
   Nonfiction.find({ author: req.params.author }).then(book => {
     res.json(book);
   });
 });
 app.get("/nonfiction/title/:title", function(req, res) {
   Nonfiction.find({ title: req.params.title }).then(book => {
+    res.json(book);
+  });
+});
+app.get("/nonfiction/rank/:rank", function(req, res) {
+  Nonfiction.find({ rank: req.params.rank }).then(book => {
     res.json(book);
   });
 });
@@ -87,7 +97,7 @@ app.get("/ourbooks", function(req, res) {
     res.json(books);
   });
 });
-app.get("/ourbooks/:author", function(req, res) {
+app.get("/ourbooks/author/:author", function(req, res) {
   OurBook.find({ author: req.params.author }).then(book => {
     res.json(book);
   });
@@ -102,14 +112,14 @@ app.post("/ourbooks", function(req, res) {
     res.json(book);
   });
 });
-app.put("/ourbooks/:title", function(req, res) {
+app.put("/ourbooks/title/:title", function(req, res) {
   OurBook.findOneAndUpdate({ title: req.params.title }, req.body, {
     new: true
   }).then(book => {
     res.json(book);
   });
 });
-app.delete("/ourbooks/:title", function(req, res) {
+app.delete("/ourbooks/title/:title", function(req, res) {
   OurBook.findOneAndDelete({ title: req.params.title }).then(book => {
     res.json(book);
   });
