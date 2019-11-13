@@ -8,7 +8,9 @@ const urlTwo =
 
 axios
   .get(url)
+  // .then(res => res.json())
   .then(res => {
+    console.log(typeof res);
     // console.log("Success", res.data.results.books);
     let books = JSON.stringify(res.data.results.books);
     fs.writeFile("./fictionBooks.json", books, err => {

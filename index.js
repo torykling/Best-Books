@@ -6,6 +6,12 @@ const parser = require("body-parser");
 
 app.use(parser.json());
 // app.use(require("./routes/index.js"));
+app.get("/", function(req, res) {
+  res.json({
+    "Nonfiction bestsellers": "http://localhost:4000/nonfiction",
+    "Fiction bestsellers": "http://localhost:4000/fiction"
+  });
+});
 
 app.get("/fiction", function(req, res) {
   Book.find({}).then(books => {
