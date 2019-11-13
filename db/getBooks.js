@@ -13,7 +13,7 @@ axios
     console.log(typeof res);
     // console.log("Success", res.data.results.books);
     let books = JSON.stringify(res.data.results.books);
-    fs.writeFile("./fictionBooks.json", books, err => {
+    fs.writeFile("./db/json/fictionBooks.json", books, err => {
       if (err) {
         console.log(err);
       } else {
@@ -25,23 +25,17 @@ axios
     console.log("oops", err);
   });
 
-// axios.get(urlTwo).then(res => {
-//   //   console.log(res.data.results.books);
-//   let nonfictionBooks = JSON.stringify(res.data.results.books);
-//   fs.appendFile("./books.json", res.data.results.books, err => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log("success");
-//     }
-//   });
-//   fs.readFile("./books.json", function(err, data) {
-//     if (err) {
-//       console.log(err);
-//     }
-//     console.log(data);
-//   });
-// });
+axios.get(urlTwo).then(res => {
+  //   console.log(res.data.results.books);
+  let nonfictionBooks = JSON.stringify(res.data.results.books);
+  fs.writeFile("./db/json/nonfictionBooks.json", nonfictionBooks, err => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("success");
+    }
+  });
+});
 
 // const requestOne = axios.get(url);
 // const requestTwo = axios.get(urlTwo);

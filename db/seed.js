@@ -1,7 +1,7 @@
 const Book = require("../models/Book.js");
-const bookData = require("./fictionBooks.json");
+const bookData = require("./json/fictionBooks.json");
 const Nonfiction = require("../models/Nonfiction.js");
-const nonfictionData = require("./nonfictionBooks.json");
+const nonfictionData = require("./json/nonfictionBooks.json");
 // const reviews = require("./bookReviews.json");
 const axios = require("axios");
 
