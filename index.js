@@ -9,8 +9,9 @@ app.use(parser.json());
 
 app.get("/", function(req, res) {
   res.json({
-    "Nonfiction bestsellers": "http://localhost:4000/nonfiction",
-    "Fiction bestsellers": "http://localhost:4000/fiction"
+    "Nonfiction bestsellers":
+      "https://best-books-tkling.herokuapp.com/nonfiction",
+    "Fiction bestsellers": "https://best-books-tkling.herokuapp.com/fiction"
   });
 });
 // fiction routes
