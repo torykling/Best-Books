@@ -130,4 +130,8 @@ app.delete("/ourbooks", function(req, res) {
   });
 });
 
-app.listen(4000, () => console.log("listening on port 4000"));
+app.set("port", process.env.PORT || 4000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
