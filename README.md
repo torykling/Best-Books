@@ -1,6 +1,6 @@
 # Best Books API
 
-An API for accessing the current New York Times Bestsellers in fiction and non-fiction and a user-generated best book list
+An API for accessing the current New York Times Bestsellers in fiction and non-fiction with links to reviews from Goodreads and a user-generated best book list
 
 ## Installation
 

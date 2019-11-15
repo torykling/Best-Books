@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "docs": "apidoc -i ./ -e node modules/  -o ./docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apidoc": "^0.18.0",
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.10"
