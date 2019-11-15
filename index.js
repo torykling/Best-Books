@@ -282,6 +282,7 @@ app.delete("/ourbooks", function(req, res) {
   });
 });
 
+app.use("/docs", express.static("./docs"));
 app.set("port", process.env.PORT || 4000);
 
 app.listen(app.get("port"), () => {
