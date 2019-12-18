@@ -3,8 +3,6 @@ const fictionData = require("./json/fictionBooks.json");
 const Nonfiction = require("../models/Nonfiction.js");
 const nonfictionData = require("./json/nonfictionBooks.json");
 
-const axios = require("axios");
-
 // create arrays of review links sorted by ISBN
 const fictionReviews = fictionData.map(book => {
   const item = {};

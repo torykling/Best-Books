@@ -1,13 +1,14 @@
 const express = require("express");
+const app = express();
 const Fiction = require("./models/Fiction");
 const Nonfiction = require("./models/Nonfiction");
 const OurBook = require("./models/OurBook");
-const app = express();
 const parser = require("body-parser");
 const cors = require("cors");
 
 app.use(parser.json());
 app.use(cors());
+
 app.get("/", function(req, res) {
   res.json({
     "Nonfiction bestsellers":
@@ -287,5 +288,5 @@ app.use("/docs", express.static("./docs"));
 app.set("port", process.env.PORT || 4000);
 
 app.listen(app.get("port"), () => {
-  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+  console.log(`PORT: ${app.get("port")}`);
 });
