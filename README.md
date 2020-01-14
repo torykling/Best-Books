@@ -4,7 +4,7 @@ An API for accessing the current New York Times Bestsellers in fiction and non-f
 
 ## Installation
 
-Fork and clone this repository. Run npm install to install dependendencies.
+Fork and clone this repository. Run npm install to install dependendencies. Run nodemon index.js to run the server locally.
 
 ## Endpoints
 
@@ -45,6 +45,17 @@ Sample result from this endpoint: https://best-books-tkling.herokuapp.com/nonfic
     }
 ]
 ```
+
+## To Re-seed
+
+To re-seed the database with up to date books, run the following commands.
+
+```
+node db/getBooks.js
+node db/seed.js
+```
+
+Then git add, commit, and push to Heroku master.
 
 ## Technologies Used
 
