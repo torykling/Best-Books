@@ -55,7 +55,11 @@ node db/getBooks.js
 node db/seed.js
 ```
 
-Then git add, commit, and push to Heroku master.
+Then git add, commit, and push to Heroku master before using the following command to seed the Atlas database.
+
+```
+heroku run node db/seed.js
+```
 
 ## Technologies Used
 
